@@ -1,5 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/NavBar";
+import { Suspense } from "react";
+import AuthProvider from "@/Servide/AuthProvider";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,9 +24,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        {children}
+        <Suspense>
+          <AuthProvider>
+            <Navbar />
+
+            {/* Main content grows to fill available space */}
+            <main className="flex-1">{children}</main>
+
+            {/* Footer sticks to bottom */}
+            <Footer />
+          </AuthProvider>
+        </Suspense>
       </body>
     </html>
   );
