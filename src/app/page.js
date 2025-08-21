@@ -1,11 +1,11 @@
-import Image from "next/image";
+import HomePage from "./components/HomePages/HomePage";
 
 export default function Home() {
   return (
     <div>
-      <h1>
-        hello world!
-      </h1>
+      <main>
+        <HomePage></HomePage>
+      </main>
     </div>
   );
 }
