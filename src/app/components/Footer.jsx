@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-base-200 text-base-content py-12 shadow-md">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-blue-50 text-gray-700 py-12 shadow-inner">
+      <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
 
         {/* Logo */}
         <div>
@@ -17,33 +17,77 @@ const Footer = () => {
 
         {/* Useful Links */}
         <div>
-          <h6 className="footer-title font-semibold mb-4">Useful Links</h6>
+          <h6 className="font-semibold mb-4 text-blue-600">Useful Links</h6>
           <ul className="space-y-2">
-            <li><Link href="/about" className="link link-hover">About</Link></li>
-            <li><Link href="/services" className="link link-hover">Services</Link></li>
-            <li><Link href="/blog" className="link link-hover">Blog</Link></li>
-            <li><Link href="/contact" className="link link-hover">Contact</Link></li>
+            <li>
+              <Link href="/about" className="hover:text-blue-500 transition">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="hover:text-blue-500 transition">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" className="hover:text-blue-500 transition">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-blue-500 transition">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
         {/* Company */}
         <div>
-          <h6 className="footer-title font-semibold mb-4">Company</h6>
+          <h6 className="font-semibold mb-4 text-blue-600">Company</h6>
           <ul className="space-y-2">
-            <li><Link href="/about" className="link link-hover">About us</Link></li>
-            <li><Link href="/contact" className="link link-hover">Contact</Link></li>
-            <li><Link href="/jobs" className="link link-hover">Jobs</Link></li>
-            <li><Link href="/press" className="link link-hover">Press kit</Link></li>
+            <li>
+              <Link href="/about" className="hover:text-blue-500 transition">
+                About us
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-blue-500 transition">
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link href="/jobs" className="hover:text-blue-500 transition">
+                Jobs
+              </Link>
+            </li>
+            <li>
+              <Link href="/press" className="hover:text-blue-500 transition">
+                Press kit
+              </Link>
+            </li>
           </ul>
         </div>
 
         {/* Legal */}
         <div>
-          <h6 className="footer-title font-semibold mb-4">Legal</h6>
+          <h6 className="font-semibold mb-4 text-blue-600">Legal</h6>
           <ul className="space-y-2">
-            <li><Link href="/terms" className="link link-hover">Terms of use</Link></li>
-            <li><Link href="/privacy" className="link link-hover">Privacy policy</Link></li>
-            <li><Link href="/cookies" className="link link-hover">Cookie policy</Link></li>
+            <li>
+              <Link href="/terms" className="hover:text-blue-500 transition">
+                Terms of use
+              </Link>
+            </li>
+            <li>
+              <Link href="/privacy" className="hover:text-blue-500 transition">
+                Privacy policy
+              </Link>
+            </li>
+            <li>
+              <Link href="/cookies" className="hover:text-blue-500 transition">
+                Cookie policy
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
